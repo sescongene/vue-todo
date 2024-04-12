@@ -26,10 +26,13 @@
 
     <template #footer>
       <todo-form />
-      <div class="flex">
+  
+    </template>
+  </UCard>
+  <UCard class="mx-auto card-width mt-5">
+    <div class="flex justify-end">
         <UButton size="xs" @click="logout">Logout</UButton>
       </div>
-    </template>
   </UCard>
 </template>
 

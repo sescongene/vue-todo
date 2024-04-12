@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxt/ui", "@nuxtjs/apollo", "@pinia/nuxt"],
@@ -15,12 +17,10 @@ export default defineNuxtConfig({
 
     clients: {
       default: {
-        httpEndpoint: "http://localhost/graphql",
+        httpEndpoint: process.env.GRAPHQL_URL || "http://localhost/graphql",
         tokenStorage: "cookie",
       },
     },
   },
-  ui: {
-    
-  },
+  ui: {},
 });
